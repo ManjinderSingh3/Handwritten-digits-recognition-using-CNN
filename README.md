@@ -32,7 +32,8 @@ I have used Sequential model to define the model. In sequential model we can add
 - 2nd Dropout Layer to prevent Overfitting.  
 - Dense Layer or Full Connection Layer.  
 - Output Layer has 10 nodes. I have used sofmax activation function because there are total 10 classes and I want sum of probabilities to be 1.  
-- Model Compilation using adam optimizer and loss = 'categorical_crossentropy' instead of 'binary_crossentropy' because there are 10 different classes.  
+- Model Compilation using adam optimizer and loss = 'categorical_crossentropy' instead of 'binary_crossentropy' because there are 10 different classes. 
+- ![image](https://github.com/ManjinderSingh3/Handwritten-digits-recognition-using-CNN/blob/main/Results/Model%20Training.png) 
 
 ### 5. Model Description:
 a. Input Image shape : (28 * 28 * 1)  
@@ -42,22 +43,19 @@ e. Output of MaxPool2D Layer: (24-2)/2 +1 = 12
 f. Flatten Layer: 12*12*64 = 9216  
 So, Output of 1st convolution layer is (26*26*32), where 32 is number of filters and output of 2nd convolution layer is (24*24*64), where 64 is number of filters.   Similarly, output of all other layers is also calculated in the same way.
 
-
-### 6.Training Model
+### 6. Model Evaluation 
 I have trained the model with batch size of 32. For testing the results of model, I took 10 epochs in first attempt and 12 epochs in second attempt.
-
-### 7.Model Evaluation 
 **Number of epochs : 12**
 a. Loss after 12th Epoch - 0.0083  
 b. Accuracy after 12th Epoch - 0.9975 (or 99.75%)  
 c. Validation/Test loss after 12th Epoch – 0.0489  
 d. Validation/Test accuracy after 12th Epoch – 0.9886 (or 98.86%)  
 
-### 8. Observation 
+### 7. Observation 
 After 10 epochs validation loss increase and validation accuracy decreases.
 ![image](https://github.com/ManjinderSingh3/Handwritten-digits-recognition-using-CNN/blob/main/Results/Model%20Accuracy%20and%20loss.png)
 
-### 9. Prediction
+### 8. Prediction
 a. Randomly chosen digit
 ![image](https://github.com/ManjinderSingh3/Handwritten-digits-recognition-using-CNN/blob/main/Results/Prediction.png)
 #### Confusion Matrix
